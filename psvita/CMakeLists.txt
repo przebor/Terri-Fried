@@ -62,14 +62,34 @@ target_link_libraries(${VITA_APP_NAME}
 
 vita_create_self(${SHORT_NAME}.self ${SHORT_NAME})
 vita_create_vpk(${SHORT_NAME}.vpk ${VITA_TITLEID} ${SHORT_NAME}.self
-  VERSION ${VITA_VERSION}
-  NAME ${VITA_APP_NAME}
-  
-  # Livearea files
-  FILE sce_sys/icon0.png sce_sys/icon0.png
-  FILE sce_sys/pic0.png sce_sys/pic0.png
-  FILE sce_sys/livearea/contents/bg0.png sce_sys/livearea/contents/bg0.png
-  FILE sce_sys/livearea/contents/startup.png sce_sys/livearea/contents/startup.png
-  FILE sce_sys/livearea/contents/template.xml sce_sys/livearea/contents/template.xml
+    VERSION ${VITA_VERSION}
+    NAME ${VITA_APP_NAME}
+
+    # Livearea files
+    FILE sce_sys/icon0.png sce_sys/icon0.png
+    FILE sce_sys/pic0.png sce_sys/pic0.png
+    FILE sce_sys/livearea/contents/bg0.png sce_sys/livearea/contents/bg0.png
+    FILE sce_sys/livearea/contents/startup.png sce_sys/livearea/contents/startup.png
+    FILE sce_sys/livearea/contents/template.xml sce_sys/livearea/contents/template.xml
+
+    # Fonts
+    FILE resources/font.otf resources/font.otf
+
+    # Audio
+    FILE resources/click.ogg resources/click.ogg
+    FILE resources/coin.ogg resources/coin.ogg
+    FILE resources/die.ogg resources/die.ogg
+    FILE resources/launch.ogg resources/launch.ogg
+    FILE resources/select.ogg resources/select.ogg
+    FILE resources/splash.ogg resources/splash.ogg
+
+    # Images
+    FILE resources/coin.png resources/coin.png
+    FILE resources/egg.png resources/egg.png
+    FILE resources/lava.png resources/lava.png
+    FILE resources/logo.png resources/logo.png
+    FILE resources/platform.png resources/platform.png
+    FILE resources/scorebox.png resources/scorebox.png
+    FILE resources/splash_egg.png resources/splash_egg.png
 )
 
