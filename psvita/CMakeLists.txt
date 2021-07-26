@@ -20,44 +20,48 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 set(VITA_MKSFOEX_FLAGS "${VITA_MKSFOEX_FLAGS} -d PARENTAL_LEVEL=1")
 
-include_directories(
-	../common
-)
-
 link_directories(
-  ${CMAKE_CURRENT_BINARY_DIR}
+    ${CMAKE_CURRENT_BINARY_DIR}
 )
 
 add_executable(${VITA_APP_NAME}
-  src/main.cpp
-  src/player.h
-  src/player.cpp
-  src/platform.h
-  src/platform.cpp
+    src/main.cpp
+    src/player.h
+    src/player.cpp
+    src/platform.h
+    src/platform.cpp
+    src/const.h
 )
 
 target_link_libraries(${VITA_APP_NAME}
-  SceLibKernel_stub
-  SceDisplay_stub
-  SceTouch_stub
-  SceAudio_stub
-  -lvita2d 
-  -lSceDisplay_stub 
-  -lSceGxm_stub
-  -lSceSysmodule_stub
-  -lSceCtrl_stub
-  -lScePgf_stub
-  -lScePvf_stub
-  -lSceCommonDialog_stub
-  -lfreetype
-  -lpng
-  -ljpeg
-  -lz
-  -lm
-  -lc
-  soloud
-  pthread
-  m
+    SceAppMgr_stub
+    c
+    debugnet
+    SceNetCtl_stub
+    SceNet_stub
+    SceSysmodule_stub
+    SceLibKernel_stub
+    SceDisplay_stub
+    SceTouch_stub
+    SceAudio_stub
+    SceAppMgr_stub
+    -lvita2d
+    -lSceDisplay_stub
+    -lSceGxm_stub
+    -lSceSysmodule_stub
+    -lSceCtrl_stub
+    -lScePgf_stub
+    -lScePvf_stub
+    -lSceCommonDialog_stub
+    -lfreetype
+    -lpng
+    -ljpeg
+    -lz
+    -lm
+    -lc
+    soloud
+    pthread
+    m
 )
 
 vita_create_self(${SHORT_NAME}.self ${SHORT_NAME})
