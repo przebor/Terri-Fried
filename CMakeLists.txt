@@ -24,8 +24,6 @@ link_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-set(CMAKE_BUILD_RPATH build)
-
 add_executable(${VITA_APP_NAME}
     src/main.cpp
     src/player.h

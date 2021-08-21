@@ -19,8 +19,8 @@ It's suggested to use Ubuntu on WSL in case of compiling on linux, it is the sam
 1. Install VitaSDK via [vdpm](https://github.com/vitasdk/vdpm)
 2. Clone this repository: `git clone https://github.com/przebor/Terri-Fried` and move into it: `cd Terri-Fried`
 3. Generate Makefile: `cmake .`
-4. Build the vita package: `make -C build Terri-Fried.vpk`
-5. Compiled Terri-Fried should be available at `build/Terri-Fried.vpk`
+4. Build the vita package: `make Terri-Fried.vpk`
+5. Compiled Terri-Fried should be available at `Terri-Fried.vpk`
 ## To-Do (or rather Wanna-Do)
 Literally everything you could think of:
 - Scoreboard
@@ -30,3 +30,4 @@ Literally everything you could think of:
 - Settings + main menu
 ## Credits
 Original source code - [Terri-Fried](https://github.com/PolyMarsDev/Terri-Fried)
+Github Action for building - [mandar1jn's fork](https://github.com/mandar1jn/Terri-Fried)
